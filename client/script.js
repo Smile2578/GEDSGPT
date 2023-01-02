@@ -33,6 +33,17 @@ function typeText(element, text) {
     }, 20)
 }
 
+function validateForm() {
+  var text = document.getElementById("text").value;
+
+  if (text == "") {
+    alert("Il faut écrire quelque chose !");
+    return false; // prevent form submission if no text is entered
+  } else {
+    return true; // allow form submission if text is entered
+  }  
+}  
+
 // generate unique ID for each message div of bot
 // necessary for typing text effect for that specific reply
 // without unique ID, typing text will work on every element
